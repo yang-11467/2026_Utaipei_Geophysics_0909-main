@@ -1,0 +1,2614 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地球物理通論｜新手極速通關指南 · General Geophysics Orientation</title>
+  <meta name="description" content="臺北市立大學地球環境暨生物資源學系「地球物理通論」課程新手全攻略：3分鐘掌握上課方式（DEAR建模循環、CER科學論證、AI協作、CLIL雙語）、裝備檢查清單與18週學習冒險地圖！">
+  
+  <!-- Modern Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & CSS VARIABLES (SPEED & COSMIC GEOPHYSICS THEME)
+       ========================================================================== */
+    :root {
+      --font-sans: 'Outfit', 'Noto Sans TC', 'Source Sans 3', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      /* Dark Mode Palette (Default) */
+      --bg-base: #080d1a;
+      --bg-surface: #0e172a;
+      --bg-surface-elevated: #162238;
+      --bg-glass: rgba(14, 23, 42, 0.75);
+      --bg-glass-card: rgba(22, 34, 56, 0.65);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(0, 229, 255, 0.3);
+      
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      /* Vibrant Geophysics Accents */
+      --cyan-neon: #00e5ff;
+      --cyan-glow: rgba(0, 229, 255, 0.25);
+      --magma-orange: #ff5722;
+      --magma-glow: rgba(255, 87, 34, 0.25);
+      --amber-gold: #fbbf24;
+      --amber-glow: rgba(251, 191, 36, 0.2);
+      --emerald-green: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --purple-ai: #a855f7;
+      --purple-glow: rgba(168, 85, 247, 0.25);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+      --shadow-cyan: 0 8px 30px rgba(0, 229, 255, 0.2);
+      
+      --max-w: 1200px;
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-glass: rgba(255, 255, 255, 0.85);
+      --bg-glass-card: rgba(255, 255, 255, 0.9);
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --border-glow: rgba(2, 132, 199, 0.25);
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+      
+      --cyan-neon: #0284c7;
+      --cyan-glow: rgba(2, 132, 199, 0.15);
+      --magma-orange: #ea580c;
+      --magma-glow: rgba(234, 88, 12, 0.15);
+      --amber-gold: #d97706;
+      --amber-glow: rgba(217, 119, 6, 0.15);
+      --emerald-green: #059669;
+      --emerald-glow: rgba(5, 150, 105, 0.15);
+      --purple-ai: #7c3aed;
+      --purple-glow: rgba(124, 58, 237, 0.15);
+
+      --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.12);
+      --shadow-cyan: 0 8px 25px rgba(2, 132, 199, 0.12);
+    }
+
+    /* ==========================================================================
+       RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(0, 229, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 25%, rgba(255, 87, 34, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 50% 70%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius-md);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background var(--transition-fast);
+    }
+
+    .nav-container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--cyan-neon), var(--magma-orange));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 800;
+      box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-tool {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-tool:hover {
+      border-color: var(--cyan-neon);
+      color: var(--cyan-neon);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary-action {
+      background: linear-gradient(135deg, var(--cyan-neon), #0284c7);
+      color: #04101e;
+      border: none;
+      padding: 0.52rem 1rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 15px var(--cyan-glow);
+      transition: all var(--transition-fast);
+    }
+
+    .btn-primary-action:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px var(--cyan-glow);
+    }
+
+    /* Reading Progress Bar */
+    .scroll-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--cyan-neon), var(--magma-orange));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* ==========================================================================
+       CONTAINERS & LAYOUT
+       ========================================================================== */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 4.5rem 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3rem;
+    }
+
+    .badge-speed {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--cyan-neon);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      margin-bottom: 0.9rem;
+    }
+
+    .badge-magma {
+      background: rgba(255, 87, 34, 0.1);
+      color: var(--magma-orange);
+      border-color: rgba(255, 87, 34, 0.25);
+    }
+
+    .badge-purple {
+      background: rgba(168, 85, 247, 0.1);
+      color: var(--purple-ai);
+      border-color: rgba(168, 85, 247, 0.25);
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       HERO SECTION (FAST, HIGH ENERGY, PUNCHY)
+       ========================================================================== */
+    .hero-section {
+      padding: 5rem 0 3.5rem;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.1rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-tag .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald-green);
+      box-shadow: 0 0 10px var(--emerald-green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    .text-gradient-cyan {
+      background: linear-gradient(135deg, #ffffff 30%, var(--cyan-neon) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    [data-theme="light"] .text-gradient-cyan {
+      background: linear-gradient(135deg, #0f172a 30%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.18rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-desc strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn-hero-primary {
+      background: linear-gradient(135deg, var(--cyan-neon), #0284c7);
+      color: #031122;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 0.9rem 1.8rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px var(--cyan-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-hero-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px var(--cyan-glow);
+      filter: brightness(1.08);
+    }
+
+    .btn-hero-secondary {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 0.9rem 1.8rem;
+      border-radius: var(--radius-md);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: var(--text-muted);
+      background: var(--bg-surface-elevated);
+      transform: translateY(-2px);
+    }
+
+    /* Golden Rules Cards */
+    .golden-rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      text-align: left;
+    }
+
+    .rule-card {
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-smooth);
+      backdrop-filter: blur(12px);
+    }
+
+    .rule-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--cyan-neon);
+      opacity: 0.8;
+      transition: transform var(--transition-fast);
+    }
+
+    .rule-card.magma::before { background: var(--magma-orange); }
+    .rule-card.purple::before { background: var(--purple-ai); }
+
+    .rule-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-md);
+    }
+
+    .rule-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .rule-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--cyan-neon);
+    }
+    .rule-card.magma .rule-tag { color: var(--magma-orange); }
+    .rule-card.purple .rule-tag { color: var(--purple-ai); }
+
+    .rule-icon {
+      font-size: 1.3rem;
+    }
+
+    .rule-en {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .rule-zh {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       SECTION: 3-PILLARS BENTO GRID (SPEEDRUN OVERVIEW)
+       ========================================================================== */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+    }
+
+    .bento-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bento-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .bento-card.col-8 { grid-column: span 8; }
+    .bento-card.col-4 { grid-column: span 4; }
+    .bento-card.col-6 { grid-column: span 6; }
+    .bento-card.col-12 { grid-column: span 12; }
+
+    @media (max-width: 900px) {
+      .bento-card.col-8,
+      .bento-card.col-4,
+      .bento-card.col-6 { grid-column: span 12; }
+    }
+
+    .card-meta-top {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-body-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .feature-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .chip.cyan { border-color: rgba(0, 229, 255, 0.3); color: var(--cyan-neon); }
+    .chip.magma { border-color: rgba(255, 87, 34, 0.3); color: var(--magma-orange); }
+    .chip.purple { border-color: rgba(168, 85, 247, 0.3); color: var(--purple-ai); }
+
+    /* Paradigm Shift Comparison */
+    .comparison-box {
+      margin-top: 2rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-box { grid-template-columns: 1fr; }
+    }
+
+    .compare-col {
+      padding: 1rem;
+      border-radius: var(--radius-md);
+    }
+
+    .compare-col.traditional {
+      background: rgba(239, 68, 68, 0.05);
+      border: 1px dashed rgba(239, 68, 68, 0.25);
+    }
+
+    .compare-col.modern {
+      background: rgba(16, 185, 129, 0.07);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .compare-title {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .compare-list {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       SECTION: HOW WE LEARN (DEAR, CER, AI, GRADING)
+       ========================================================================== */
+    .tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .tabs-nav {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 0.35rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      gap: 0.35rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.55rem 1.3rem;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn.active {
+      background: var(--cyan-neon);
+      color: #04101e;
+      box-shadow: 0 4px 15px var(--cyan-glow);
+    }
+
+    [data-theme="light"] .tab-btn.active {
+      background: var(--cyan-neon);
+      color: #ffffff;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* DEAR Cycle Cards */
+    .dear-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .dear-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 550px) {
+      .dear-grid { grid-template-columns: 1fr; }
+    }
+
+    .dear-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      position: relative;
+      transition: all var(--transition-smooth);
+    }
+
+    .dear-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+    }
+
+    .dear-letter {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--cyan-neon);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-mono);
+    }
+
+    .dear-card:nth-child(2) .dear-letter { color: var(--emerald-green); }
+    .dear-card:nth-child(3) .dear-letter { color: var(--amber-gold); }
+    .dear-card:nth-child(4) .dear-letter { color: var(--magma-orange); }
+
+    .dear-step-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .dear-step-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Interactive CER Simulator */
+    .cer-interactive {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+
+    .cer-selector-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+
+    .cer-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .cer-btn.active, .cer-btn:hover {
+      background: rgba(0, 229, 255, 0.1);
+      border-color: var(--cyan-neon);
+      color: var(--cyan-neon);
+    }
+
+    .cer-cards-trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .cer-cards-trio { grid-template-columns: 1fr; }
+    }
+
+    .cer-box {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cer-box-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .cer-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .cer-badge.c { background: rgba(0, 229, 255, 0.2); color: var(--cyan-neon); }
+    .cer-badge.e { background: rgba(16, 185, 129, 0.2); color: var(--emerald-green); }
+    .cer-badge.r { background: rgba(255, 87, 34, 0.2); color: var(--magma-orange); }
+
+    .cer-box-text {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Grading Breakdown */
+    .grading-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grading-grid { grid-template-columns: 1fr; }
+    }
+
+    .grade-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .grade-pct {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 0.6rem;
+      font-family: var(--font-mono);
+    }
+
+    .grade-pct.cyan { color: var(--cyan-neon); }
+    .grade-pct.orange { color: var(--magma-orange); }
+    .grade-pct.green { color: var(--emerald-green); }
+
+    .grade-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .grade-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       SECTION: PRE-FLIGHT CHECKLIST (INTERACTIVE ONBOARDING)
+       ========================================================================== */
+    .checklist-wrap {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .progress-bar-container {
+      margin-bottom: 2rem;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--cyan-neon), var(--emerald-green));
+      border-radius: var(--radius-full);
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .check-item {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      user-select: none;
+    }
+
+    .check-item:hover {
+      border-color: var(--border-glow);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .check-item.completed {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    .check-box-custom {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      border: 2px solid var(--text-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all var(--transition-fast);
+    }
+
+    .check-item.completed .check-box-custom {
+      background: var(--emerald-green);
+      border-color: var(--emerald-green);
+      color: #fff;
+    }
+
+    .check-box-custom svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 3;
+      display: none;
+    }
+
+    .check-item.completed .check-box-custom svg {
+      display: block;
+    }
+
+    .check-text h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .check-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .celebration-toast {
+      display: none;
+      margin-top: 1.8rem;
+      padding: 1.2rem;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(0, 229, 255, 0.15));
+      border: 1px solid var(--emerald-green);
+      border-radius: var(--radius-md);
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .celebration-toast.show {
+      display: block;
+    }
+
+    /* ==========================================================================
+       SECTION: NO-FEAR FAQ (新手三怕)
+       ========================================================================== */
+    .fear-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 850px) {
+      .fear-grid { grid-template-columns: 1fr; }
+    }
+
+    .fear-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fear-question {
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.35;
+      color: #f87171;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    [data-theme="light"] .fear-question { color: #dc2626; }
+
+    .fear-answer {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .fear-answer strong {
+      color: var(--emerald-green);
+    }
+
+    /* ==========================================================================
+       SECTION: 18-WEEK INTERACTIVE ROADMAP
+       ========================================================================== */
+    .roadmap-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .week-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      position: relative;
+      transition: all var(--transition-smooth);
+    }
+
+    .week-item:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-3px);
+    }
+
+    .week-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .week-num {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--cyan-neon);
+    }
+
+    .week-tag-phase {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+
+    .week-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .week-task {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       SECTION: MINI QUIZ (DISCOVER YOUR GEOPHYSICIST PERSONA)
+       ========================================================================== */
+    .quiz-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .quiz-q-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .quiz-opt-btn {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all var(--transition-fast);
+    }
+
+    .quiz-opt-btn:hover {
+      border-color: var(--cyan-neon);
+      background: rgba(0, 229, 255, 0.06);
+      transform: translateX(4px);
+    }
+
+    .quiz-opt-btn .opt-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .quiz-result-box {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .quiz-result-box.show {
+      display: block;
+    }
+
+    .persona-badge {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .persona-title {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--cyan-neon);
+      margin-bottom: 0.8rem;
+    }
+
+    .persona-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       SECTION: FAQ ACCORDION
+       ========================================================================== */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all var(--transition-fast);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      padding: 1.3rem 1.5rem;
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-icon-arrow {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      transition: transform var(--transition-fast);
+    }
+
+    .faq-item.active .faq-icon-arrow {
+      transform: rotate(180deg);
+      color: var(--cyan-neon);
+    }
+
+    .faq-answer-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer-content {
+      max-height: 300px;
+      padding-bottom: 1.4rem;
+    }
+
+    /* ==========================================================================
+       SECTION: RESOURCE LAUNCHPAD & FOOTER
+       ========================================================================== */
+    .launchpad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .launch-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all var(--transition-smooth);
+    }
+
+    .launch-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .launch-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .launch-icon {
+      font-size: 1.6rem;
+    }
+
+    .launch-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .launch-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .launch-link-btn {
+      color: var(--cyan-neon);
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap var(--transition-fast);
+    }
+
+    .launch-card:hover .launch-link-btn {
+      gap: 0.6rem;
+    }
+
+    .site-footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      padding: 3rem 0;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .footer-content {
+      max-width: 650px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .footer-motto {
+      font-style: italic;
+      color: var(--text-dim);
+    }
+
+    /* Canvas Confetti */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Modal for Concept Images */
+    .image-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .modal-img-wrap {
+      max-width: 900px;
+      max-height: 85vh;
+      position: relative;
+    }
+
+    .modal-img-wrap img {
+      max-height: 85vh;
+      object-fit: contain;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-modal-close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 38px;
+      height: 38px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 50%;
+      color: var(--text-main);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .section-title { font-size: 1.8rem; }
+      .hero-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Confetti Canvas for Gamification -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Sticky Site Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand-group">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">
+          <h1>地球物理通論</h1>
+          <p>UTaipei 地生系 · 陳達毅老師</p>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#speed-intro" class="nav-link">⚡ 30s 速覽</a></li>
+          <li><a href="#how-we-learn" class="nav-link">💡 上課方式</a></li>
+          <li><a href="#checklist" class="nav-link">🎒 裝備檢查</a></li>
+          <li><a href="#no-fear" class="nav-link">🛡️ 零基礎免驚</a></li>
+          <li><a href="#roadmap" class="nav-link">🗺️ 18週地圖</a></li>
+          <li><a href="#quiz" class="nav-link">🎮 探險家測驗</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-tool" id="theme-toggle" aria-label="切換深淺色模式" title="切換深/淺色">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a href="classroom_tool.html" class="btn-primary-action" id="link-classroom-tool" title="前往第一堂課投影與白板工具">
+          <span>🛠️ 現場互動白板</span>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-progress" id="scroll-bar"></div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-tag">
+          <span class="dot"></span>
+          <span>115 學年第 1 學期 · 地生系二年級核心指南</span>
+        </div>
+
+        <h2 class="hero-title">
+          如果不知道板塊構造，<br>
+          你能<span class="text-gradient-cyan">推論地球正在發生什麼嗎？</span>
+        </h2>
+
+        <p class="hero-desc">
+          這不是一門只背名詞或套公式的傳統課，更不是把答案全丟給 AI 的無趣課堂。<br>
+          我們將學習像<strong>地球物理學家</strong>一樣：<strong>用資料當眼睛，以模型為地圖</strong>，在 18 週內解鎖地球深處的秘密！
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#checklist" class="btn-hero-primary">
+            <span>🎒 展開行前裝備檢查</span>
+            <span style="font-family: monospace;">→</span>
+          </a>
+          <a href="#how-we-learn" class="btn-hero-secondary">
+            <span>💡 3 分鐘搞懂上課方式</span>
+          </a>
+        </div>
+
+        <!-- 3 Core Mottoes -->
+        <div class="golden-rules-grid">
+          <div class="rule-card">
+            <div class="rule-header">
+              <span class="rule-tag">科學提問 · Science</span>
+              <span class="rule-icon">🔍</span>
+            </div>
+            <div class="rule-en">How do we know?</div>
+            <div class="rule-zh">「我們怎麼知道？」——永遠追問數據背後的真相。</div>
+          </div>
+
+          <div class="rule-card magma">
+            <div class="rule-header">
+              <span class="rule-tag">證據思維 · Evidence</span>
+              <span class="rule-icon">📊</span>
+            </div>
+            <div class="rule-en">What evidence supports this?</div>
+            <div class="rule-zh">「什麼證據支持這個想法？」——不憑空想像，用觀測說話。</div>
+          </div>
+
+          <div class="rule-card purple">
+            <div class="rule-header">
+              <span class="rule-tag">AI 素養 · AI Literacy</span>
+              <span class="rule-icon">🤖</span>
+            </div>
+            <div class="rule-en">Understanding is your job.</div>
+            <div class="rule-zh">「AI 可以產生答案，但理解與批判是你的責任。」</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: 30S SPEEDRUN OVERVIEW (BENTO GRID) -->
+  <section id="speed-intro">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed">⚡ 30 秒快速掌握</span>
+        <h3 class="section-title">這門課到底在學什麼？</h3>
+        <p class="section-subtitle">
+          三條能力主線互相支援，最終匯聚成同一種關鍵能力：<br>
+          <strong>「用資料與證據理解地球，並能以模型、程式、英文與網頁清楚表達。」</strong>
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Pillar 1: Geophysics -->
+        <div class="bento-card col-4">
+          <div>
+            <div class="card-meta-top">
+              <div class="card-icon-wrap" style="color: var(--cyan-neon);">🌍</div>
+              <span class="chip cyan">學科核心</span>
+            </div>
+            <h4 class="card-title">地球物理學科知識<br><span style="font-size: 0.95rem; color: var(--text-dim);">General Geophysics</span></h4>
+            <p class="card-body-text">
+              地下深處我們無法直接看見，但可以量測地震波、重力、地磁、地電與熱流！學習<strong>正演模擬</strong>與<strong>反演推論</strong>，解碼地殼到地函。
+            </p>
+          </div>
+          <div class="feature-chips">
+            <span class="chip">折射與反射震測</span>
+            <span class="chip">重力異常</span>
+            <span class="chip">地磁條帶</span>
+            <span class="chip">地熱探勘</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Bilingual CLIL -->
+        <div class="bento-card col-4">
+          <div>
+            <div class="card-meta-top">
+              <div class="card-icon-wrap" style="color: var(--magma-orange);">🗣️</div>
+              <span class="chip magma">雙語思考</span>
+            </div>
+            <h4 class="card-title">雙語科學思維<br><span style="font-size: 0.95rem; color: var(--text-dim);">CLIL / Science in English</span></h4>
+            <p class="card-body-text">
+              拒絕死背單字！我們用英文來做科學論證。提供<strong>模組化句型庫</strong>（如 <em>We observe that... / The evidence shows...</em>），從日常討論到國際視野報告無痛過渡。
+            </p>
+          </div>
+          <div class="feature-chips">
+            <span class="chip">CER 英文論證</span>
+            <span class="chip">即席抽卡朗讀</span>
+            <span class="chip">中英文雙語簡報</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: AI & Digital Tools -->
+        <div class="bento-card col-4">
+          <div>
+            <div class="card-meta-top">
+              <div class="card-icon-wrap" style="color: var(--purple-ai);">💻</div>
+              <span class="chip purple">數位武器</span>
+            </div>
+            <h4 class="card-title">現代數位與 AI 工作流<br><span style="font-size: 0.95rem; color: var(--text-dim);">Digital & AI Literacy</span></h4>
+            <p class="card-body-text">
+              學會業界都在用的工具鏈：Google Colab 免安裝寫 Python、PyGMT 繪製專業全球地圖、AI Agent 協作除錯，以及用 GitHub Pages 發布你的人生第一個研究網頁。
+            </p>
+          </div>
+          <div class="feature-chips">
+            <span class="chip">Google Colab</span>
+            <span class="chip">PyGMT 繪圖</span>
+            <span class="chip">GitHub Pages</span>
+            <span class="chip">Gemini AI Agent</span>
+          </div>
+        </div>
+
+        <!-- Paradigm Shift Comparison Box -->
+        <div class="bento-card col-12" style="padding: 1.5rem 2rem;">
+          <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+            <span>🔄</span> 學習典範大升級：傳統地質課 vs 這門課的實戰模式
+          </h4>
+          <div class="comparison-box" style="margin-top: 1rem;">
+            <div class="compare-col traditional">
+              <div class="compare-title" style="color: #ef4444;">
+                <span>❌</span> 傳統被動學習模式
+              </div>
+              <ul class="compare-list">
+                <li><span>•</span> 老師單向講授，學生抄黑板死記地質專有名詞</li>
+                <li><span>•</span> 依賴現成解答，向 AI 索取答案直接複製貼上</li>
+                <li><span>•</span> 繁瑣的手算物理公式，考完期末考忘得一乾二淨</li>
+                <li><span>•</span> 期末繳交厚重的紙本報告，從未公開也不會再打開</li>
+              </ul>
+            </div>
+
+            <div class="compare-col modern">
+              <div class="compare-title" style="color: #10b981;">
+                <span>🚀</span> 本課程的極速實戰模式
+              </div>
+              <ul class="compare-list">
+                <li><span>•</span> <strong>觀察真實數據 → 提出假設模型 → 檢驗與修正</strong></li>
+                <li><span>•</span> <strong>AI 是協作者</strong>：紀錄提問、批判與驗證歷程，對話紀錄即是成果</li>
+                <li><span>•</span> <strong>雲端 Python (PyGMT)</strong> 直觀可視化，讓數據親自說故事</li>
+                <li><span>•</span> <strong>期末每組發布獨立 GitHub Pages 網站</strong>，成為履歷中最耀眼的作品！</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: HOW WE LEARN (DEAR, CER, AI COLLAB, GRADING) -->
+  <section id="how-we-learn" style="background: rgba(255, 255, 255, 0.015);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed badge-magma">💡 獨家學習法</span>
+        <h3 class="section-title">這門課到底怎麼上？</h3>
+        <p class="section-subtitle">
+          掌握這套「科學家思考裝甲」，你不僅能搞懂地球物理，任何科學與工程問題都能迎刃而解！
+        </p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="tabs-wrapper">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="tab-dear">🔄 DEAR 建模循環</button>
+          <button class="tab-btn" data-tab="tab-cer">🧩 CER 論證框架</button>
+          <button class="tab-btn" data-tab="tab-ai">🤖 AI 協作心法</button>
+          <button class="tab-btn" data-tab="tab-grading">💯 評量與成績配比</button>
+        </div>
+      </div>
+
+      <!-- TAB 1: DEAR CYCLE -->
+      <div class="tab-content active" id="tab-dear">
+        <div class="dear-grid">
+          <div class="dear-card">
+            <div class="dear-letter">D</div>
+            <h4 class="dear-step-title">Describe 描述現象</h4>
+            <p class="dear-step-desc">
+              不急著下結論！先仔細觀察觀測到的原始數據（例如地震走時、重力儀異常數值、地形高度差）。
+            </p>
+          </div>
+          <div class="dear-card">
+            <div class="dear-letter">E</div>
+            <h4 class="dear-step-title">Explain 提出模型</h4>
+            <p class="dear-step-desc">
+              「如果地下長這樣，會不會產生這種訊號？」建立簡化的概念模型（如假定地殼有兩層水平層）。
+            </p>
+          </div>
+          <div class="dear-card">
+            <div class="dear-letter">A</div>
+            <h4 class="dear-step-title">Apply / Analyze 分析檢驗</h4>
+            <p class="dear-step-desc">
+              利用物理原理與數學公式（如司乃耳定律、正演計算），計算模型理論值並與實際觀測嚴格比對。
+            </p>
+          </div>
+          <div class="dear-card">
+            <div class="dear-letter">R</div>
+            <h4 class="dear-step-title">Revise 修正模型</h4>
+            <p class="dear-step-desc">
+              發現預測與觀測有殘差？太棒了！這正是學習的開始——引入硬約束或軟約束，持續迭代優化模型！
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+          <button class="btn-tool" onclick="openConceptModal('docs/assets/img/map3-dear.jpg')" style="font-size: 0.9rem;">
+            <span>🔍 點擊檢視 DEAR 循環概念地圖原圖</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 2: CER FRAMEWORK -->
+      <div class="tab-content" id="tab-cer">
+        <div class="cer-interactive">
+          <div class="cer-selector-bar">
+            <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-dim);">🎯 課堂論證演練案例：</span>
+            <button class="cer-btn active" onclick="switchCER('taiwan')">🇹🇼 台灣地震帶分布</button>
+            <button class="cer-btn" onclick="switchCER('japan')">🇯🇵 日本隱沒帶震源</button>
+            <button class="cer-btn" onclick="switchCER('seismic')">⚡ 折射震測雙斜率</button>
+          </div>
+
+          <h4 id="cer-q-display" style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">
+            探究問題：為什麼台灣附近經常發生地震，且集中在特定區域？
+          </h4>
+
+          <div class="cer-cards-trio">
+            <div class="cer-box">
+              <div class="cer-box-header">
+                <span class="cer-badge c">CLAIM</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">主張</span>
+              </div>
+              <p class="cer-box-text" id="cer-claim-text">
+                台灣附近的強烈地震活動與歐亞板塊與菲律賓海板塊的聚合板塊邊界相互作用直接相關。
+              </p>
+            </div>
+
+            <div class="cer-box">
+              <div class="cer-box-header">
+                <span class="cer-badge e">EVIDENCE</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">證據</span>
+              </div>
+              <p class="cer-box-text" id="cer-evidence-text">
+                地震目錄觀測顯示震央密集沿花東縱谷與東部海域呈條帶狀分布，GPS 連續觀測站測得每年約 8 公分的板塊聚合位移量。
+              </p>
+            </div>
+
+            <div class="cer-box">
+              <div class="cer-box-header">
+                <span class="cer-badge r">REASONING</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">推理</span>
+              </div>
+              <p class="cer-box-text" id="cer-reasoning-text">
+                若板塊持續以固定速率聚合受阻，應變能量會累積在接觸界面斷層帶上，當超過岩石抗剪強度便引發破裂地震，因此地震並非隨機分布。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: AI COLLABORATION -->
+      <div class="tab-content" id="tab-ai">
+        <div class="bento-card col-12" style="background: var(--bg-surface);">
+          <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🤖 ↔️ 🧠</div>
+            <h4 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.8rem;">
+              AI 是你的副駕駛，不是抄作業的槍手
+            </h4>
+            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              課堂中老師鼓勵大家使用 Google Gemini、Claude 或 ChatGPT。<br>
+              <strong>「AI 可以一秒產出答案，但理解答案的真偽與物理邏輯是你的責任。」</strong><br>
+              作業評分中，我們會看你的提問過程（Prompt）、對 AI 回答的質疑與核對、以及修正後的見解！
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+              <div style="background: var(--bg-surface-elevated); padding: 1.2rem; border-radius: var(--radius-md); border-left: 3px solid var(--purple-ai);">
+                <div style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.3rem;">1. 提問與假說</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">請 AI 提供 3 個不同假說，不要只給單一解答。</div>
+              </div>
+              <div style="background: var(--bg-surface-elevated); padding: 1.2rem; border-radius: var(--radius-md); border-left: 3px solid var(--cyan-neon);">
+                <div style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.3rem;">2. 批判與查核</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">用露頭、震測剖面等硬約束檢驗 AI 是否在胡言亂語。</div>
+              </div>
+              <div style="background: var(--bg-surface-elevated); padding: 1.2rem; border-radius: var(--radius-md); border-left: 3px solid var(--emerald-green);">
+                <div style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.3rem;">3. 留存學習軌跡</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">將整段對話紀錄與個人反思存入 GitHub 學習歷程。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: GRADING -->
+      <div class="tab-content" id="tab-grading">
+        <div class="grading-grid">
+          <div class="grade-card">
+            <div class="grade-pct cyan">40%</div>
+            <div class="grade-name">期中測驗 Midterm</div>
+            <div class="grade-desc">
+              檢驗地球物理基本物理原理、觀測方法與幾何概念。不考死板繁瑣計算，著重觀念釐清與圖表解譯。
+            </div>
+          </div>
+
+          <div class="grade-card">
+            <div class="grade-pct orange">50%</div>
+            <div class="grade-name">歷程作業與期末專案</div>
+            <div class="grade-desc">
+              <strong>看的是過程（Process）！</strong><br>
+              Colab 程式、PyGMT 製圖、AI 探究對話、小組 GitHub Pages 成果發表與中英文雙語口頭分享。
+            </div>
+          </div>
+
+          <div class="grade-card">
+            <div class="grade-pct green">10%</div>
+            <div class="grade-name">平時參與 Participation</div>
+            <div class="grade-desc">
+              課堂發問、分組討論、CLIL 全班朗讀，以及每堂課下課前 3 分鐘填寫的 3 句 Exit Ticket 心得回饋。
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: PRE-FLIGHT CHECKLIST (HOW TO PREPARE) -->
+  <section id="checklist">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed badge-purple">🎒 行前裝備包</span>
+        <h3 class="section-title">如何準備進入這門課？</h3>
+        <p class="section-subtitle">
+          上第一堂課前，請完成這 5 項裝備打勾！每一項都超級簡單，全部點亮將解鎖「地物先鋒探險家」成就！
+        </p>
+      </div>
+
+      <div class="checklist-wrap">
+        <!-- Interactive Progress -->
+        <div class="progress-bar-container">
+          <div class="progress-header">
+            <span>裝備整裝進度</span>
+            <span id="check-progress-text" style="color: var(--cyan-neon);">0 / 5 已就緒 (0%)</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="check-progress-bar"></div>
+          </div>
+        </div>
+
+        <!-- Checklist Items -->
+        <div class="checklist-items">
+          <!-- Item 1 -->
+          <div class="check-item" data-id="1" onclick="toggleCheckItem(this)">
+            <div class="check-box-custom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="check-text">
+              <h4>💻 1. 準備一台筆記型電腦與充電器</h4>
+              <p>我們每堂課都會即席操作。Windows / Mac / Linux 皆可，普通文書機也能勝任，因為複雜運算都在雲端執行！</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="check-item" data-id="2" onclick="toggleCheckItem(this)">
+            <div class="check-box-custom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="check-text">
+              <h4>📧 2. 登入 Google 帳號並測試開啟 Colab</h4>
+              <p>打開瀏覽器造訪 <code>colab.research.google.com</code>，免安裝任何環境，打開即可開始執行 Python 科學筆記本。</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="check-item" data-id="3" onclick="toggleCheckItem(this)">
+            <div class="check-box-custom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="check-text">
+              <h4>🐙 3. 註冊 GitHub 帳號並準備建立學習倉庫</h4>
+              <p>建議建立名為 <code>geophysics-learning-2026</code> 的 repository。這將是你整學期紀錄學習、發布網頁的個人作品集！</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="check-item" data-id="4" onclick="toggleCheckItem(this)">
+            <div class="check-box-custom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="check-text">
+              <h4>🤖 4. 備妥 Google Gemini 或生成式 AI 工具</h4>
+              <p>第一堂課我們就會用專屬 Prompt 示範如何讓 AI 成為「科學假設生成器」，請確保有可用之 AI 助手。</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="check-item" data-id="5" onclick="toggleCheckItem(this)">
+            <div class="check-box-custom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="check-text">
+              <h4>🧠 5. 帶上一顆充滿好奇心與敢於懷疑的大腦</h4>
+              <p>忘掉「這題標準答案是什麼」，準備好在課堂中提問：「我們怎麼知道？」、「證據在哪裡？」。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Celebration Box -->
+        <div class="celebration-toast" id="celebration-box">
+          <div style="font-size: 2rem; margin-bottom: 0.3rem;">🎉 👑 🚀</div>
+          <div style="font-size: 1.25rem; font-weight: 800; color: var(--emerald-green); margin-bottom: 0.3rem;">
+            太棒了！你的行前裝備已全部就緒！
+          </div>
+          <p style="font-size: 0.92rem; color: var(--text-main);">
+            你已經擁有探索地球內部的一切武器，期待在第一堂課與你一起啟程！
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: NO-FEAR GUIDE (新手三怕一次破解) -->
+  <section id="no-fear" style="background: rgba(255, 255, 255, 0.015);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed">🛡️ 零基礎免驚</span>
+        <h3 class="section-title">新手常有的三大焦慮，直接破解！</h3>
+        <p class="section-subtitle">
+          如果你不是資工神人、也不是英語母語者，別擔心！這門課就是專為你量身打造的。
+        </p>
+      </div>
+
+      <div class="fear-grid">
+        <div class="fear-card">
+          <div class="fear-question">
+            <span>😱</span>
+            <span>「我不會寫 Python 程式，會不會被當掉？」</span>
+          </div>
+          <div class="fear-answer">
+            <strong>安心保證：完全不會！</strong><br>
+            這門課不是資工系的資料結構課。所有程式都在 Google Colab 雲端執行，第一堂課從 <code>print("Hello, Geophysics!")</code> 開始。老師會提供完整的 PyGMT 繪圖與計算模板，AI 助手全程幫你除錯。你只需要學會調整參數、看懂物理圖表！
+          </div>
+        </div>
+
+        <div class="fear-card">
+          <div class="fear-question">
+            <span>😰</span>
+            <span>「我英文不好，雙語 (CLIL) 上課聽得懂嗎？」</span>
+          </div>
+          <div class="fear-answer">
+            <strong>安心保證：完全免驚！</strong><br>
+            CLIL 不是逼你考托福，而是讓你掌握「用英文溝通科學」的積木。教材全部提供<strong>中英文對照講稿</strong>，並附贈八層「CLIL 萬用句型庫」。全班一起朗讀、小組一起練習，不知不覺就能用英文講出漂亮的模型論述！
+          </div>
+        </div>
+
+        <div class="fear-card">
+          <div class="fear-question">
+            <span>🤯</span>
+            <span>「地球物理的數學和物理是不是超級難？」</span>
+          </div>
+          <div class="fear-answer">
+            <strong>安心保證：重視幾何與直觀！</strong><br>
+            數學在地球物理中是「檢驗模型的鏡子」，不是用來刁難學生的。例如折射震測中，斜率的倒數就是波速，公式背後都有直觀的射線幾何意義。只要你懂直角三角形與司乃耳定律，就能推論地下千米構造！
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: 18-WEEK ROADMAP -->
+  <section id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed badge-magma">🗺️ 冒險地圖</span>
+        <h3 class="section-title">18 週學習通關路線</h3>
+        <p class="section-subtitle">
+          從地表觀測到地心深處，從校園草地實驗到期末 GitHub Pages 成果發表！
+        </p>
+      </div>
+
+      <div class="roadmap-timeline">
+        <!-- Week 1 -->
+        <div class="week-item" style="border-left: 3px solid var(--cyan-neon);">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 01</span>
+            <span class="week-tag-phase">啟航導覽</span>
+          </div>
+          <h4 class="week-title">課程說明與數位工具安裝</h4>
+          <p class="week-task">掌握 DEAR 與 CER 架構，建立 GitHub repo，初探 Colab 與 Gemini 探究。</p>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="week-item">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 02</span>
+            <span class="week-tag-phase">資料可視化</span>
+          </div>
+          <h4 class="week-title">PyGMT 繪製全球地圖</h4>
+          <p class="week-task">畫出全球高程與台灣區域地形圖，觀察板塊邊界與地震帶分布。</p>
+        </div>
+
+        <!-- Week 3-4 -->
+        <div class="week-item">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 03–04</span>
+            <span class="week-tag-phase">虛實整合</span>
+          </div>
+          <h4 class="week-title">板塊構造與 3D 列印</h4>
+          <p class="week-task">從數值高程模型到 STL 3D 列印實體模型，用雙手觸摸板塊碰撞造山證據。</p>
+        </div>
+
+        <!-- Week 5-7 -->
+        <div class="week-item" style="border-left: 3px solid var(--emerald-green);">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 05–07</span>
+            <span class="week-tag-phase">野外實測</span>
+          </div>
+          <h4 class="week-title">校園野外實驗：折射探勘</h4>
+          <p class="week-task">踏上校園草地架設檢波器實測！計算地下波速與岩盤深度，完成第一次真實走時建模。</p>
+        </div>
+
+        <!-- Week 8 -->
+        <div class="week-item" style="border-left: 3px solid #ef4444;">
+          <div class="week-badge-row">
+            <span class="week-num" style="color: #ef4444; background: rgba(239, 68, 68, 0.1);">WEEK 08</span>
+            <span class="week-tag-phase">重要檢核</span>
+          </div>
+          <h4 class="week-title">期中測驗 Midterm</h4>
+          <p class="week-task">折射震測、地震波特性與地球物理反演基本原理檢核。</p>
+        </div>
+
+        <!-- Week 9-10 -->
+        <div class="week-item">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 09–10</span>
+            <span class="week-tag-phase">看不見的力場</span>
+          </div>
+          <h4 class="week-title">重力與 Geoid 3D 打印</h4>
+          <p class="week-task">看見看不見的地球重力場，解釋地底密度體、沈積盆地與山根構造。</p>
+        </div>
+
+        <!-- Week 11 -->
+        <div class="week-item">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 11</span>
+            <span class="week-tag-phase">大師連結</span>
+          </div>
+          <h4 class="week-title">專題演講與產學連結</h4>
+          <p class="week-task">邀請業界與研究領域專家，分享真實地球物理探勘工程與前沿職涯。</p>
+        </div>
+
+        <!-- Week 12-14 -->
+        <div class="week-item">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 12–14</span>
+            <span class="week-tag-phase">能量與電磁</span>
+          </div>
+          <h4 class="week-title">地熱、地電與地磁探勘</h4>
+          <p class="week-task">解讀綠色地熱能源、大地電磁 (MT) 找熱水、居禮點與斷層電阻率。</p>
+        </div>
+
+        <!-- Week 15-16 -->
+        <div class="week-item" style="border-left: 3px solid var(--purple-ai);">
+          <div class="week-badge-row">
+            <span class="week-num" style="color: var(--purple-ai); background: rgba(168, 85, 247, 0.1);">WEEK 15–16</span>
+            <span class="week-tag-phase">榮耀發表</span>
+          </div>
+          <h4 class="week-title">期末 GitHub Pages 專案發表</h4>
+          <p class="week-task">公開發表小組研究網站！中英文雙語口頭報告，展示 AI 協作歷程與科學成果。</p>
+        </div>
+
+        <!-- Week 17-18 -->
+        <div class="week-item">
+          <div class="week-badge-row">
+            <span class="week-num">WEEK 17–18</span>
+            <span class="week-tag-phase">視野拓展</span>
+          </div>
+          <h4 class="week-title">延伸實習與機構參訪</h4>
+          <p class="week-task">參訪地震測報中心或野外觀測站，收穫滿滿地邁向高年級專題！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MINI QUIZ (PERSONA DISCOVERY) -->
+  <section id="quiz" style="background: rgba(255, 255, 255, 0.015);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed badge-purple">🎮 趣味互動</span>
+        <h3 class="section-title">測測你的「地物探險家」性格！</h3>
+        <p class="section-subtitle">
+          回答 3 題直覺選擇，看看你天生屬於哪種地球物理超能力！
+        </p>
+      </div>
+
+      <div class="quiz-card">
+        <!-- Question Screen -->
+        <div id="quiz-question-screen">
+          <h4 class="quiz-q-title" id="quiz-title">
+            Q1: 當你站在一片廣袤的平原，看見遠方地表隆起了一座新山丘，你的第一直覺是？
+          </h4>
+          <div class="quiz-options" id="quiz-options">
+            <button class="quiz-opt-btn" onclick="answerQuiz('seismic')">
+              <span class="opt-badge">A</span>
+              <span>立即架設地震儀，用震波訊號透視地底下是否有逆衝斷層在蠢蠢欲動！</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz('gravity')">
+              <span class="opt-badge">B</span>
+              <span>搬出超靈敏重力計，測測看地底下是不是有一團密度極大的基性岩漿體！</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz('thermal')">
+              <span class="opt-badge">C</span>
+              <span>探測地溫與地下水流，尋找這座山丘是否伴隨著高溫地熱溫泉水！</span>
+            </button>
+            <button class="quiz-opt-btn" onclick="answerQuiz('digital')">
+              <span class="opt-badge">D</span>
+              <span>打開筆電抓取衛星雷達干涉 (InSAR) 與 PyGMT 數據，先畫一張 3D 位移分析圖！</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="quiz-result-box" id="quiz-result-screen">
+          <div class="persona-badge" id="res-badge">⚡</div>
+          <h4 class="persona-title" id="res-title">震波穿透先鋒 · The Seismic Pioneer</h4>
+          <p class="persona-desc" id="res-desc">
+            你擁有極其敏銳的直覺與動態洞察力！就像地震波在地殼深處穿梭一樣，你擅長從微小的訊號震顫中推敲宏大的地下構造，是天生的斷層解密獵人！
+          </p>
+          <button class="btn-primary-action" onclick="restartQuiz()">
+            <span>🔄 再測一次</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed">❓ 常見問答</span>
+        <h3 class="section-title">新生常見問題 FAQ</h3>
+        <p class="section-subtitle">還有其他疑惑嗎？看看大家常問的關鍵細節。</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>上課可以只帶 iPad 或平板電腦嗎？</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer-content">
+            建議<strong>強烈自備具備實體鍵盤的筆記型電腦</strong>（Windows、Mac 或 Chromebook 皆可）。雖然 Colab 可在平板瀏覽器開啟，但寫程式、編輯 Markdown 講稿與操作 GitHub 時，實體鍵盤與多重視窗能節省你 80% 的時間！
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>分組是一個人一組，還是團隊合作？</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer-content">
+            第一堂課我們會協助全班進行分組，原則上 <strong>2–3 人一組</strong>。團隊合作是現代科學研究的核心能力，組員間可以分工：有人負責 Python 程式繪圖、有人負責 AI 假說論證、有人負責英文報告潤飾與網頁排版，共同完成 GitHub Pages 專題！
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>什麼是 GitHub Pages？做網頁會不會很花時間？</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer-content">
+            完全不用擔心！GitHub Pages 是 GitHub 提供的免費靜態網頁託管服務，只要上傳一個 <code>index.html</code> 就能立刻獲得一個全世界都能連上的公開網址。我們有現成範本與 AI 協助，重點是呈現你的研究成果，而不是從頭寫幾千行 HTML。
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>如果某週請假，我該如何跟上進度？</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer-content">
+            本課程擁有全世界最完整的開源教材庫！包括三小時逐字對照講稿、Marp 投影片、CLIL 句型附錄與 Colab Notebook，全部都在本 GitHub 倉庫中。你可以隨時自主補課，或在小組中透過 GitHub 協作同步。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: LAUNCHPAD & RESOURCES -->
+  <section id="resources" style="background: rgba(255, 255, 255, 0.015);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-speed badge-magma">📥 資源寶庫</span>
+        <h3 class="section-title">教材下載與快捷直達站</h3>
+        <p class="section-subtitle">點擊即可立即檢視或下載本課程所有教材資源！</p>
+      </div>
+
+      <div class="launchpad-grid">
+        <div class="launch-card">
+          <div class="launch-card-header">
+            <div class="launch-icon">📖</div>
+            <div class="launch-title">第一堂課完整講稿</div>
+          </div>
+          <p class="launch-desc">09:00–12:00 三小時中英文逐字對照講稿，包含黑板板書與詳細論述。</p>
+          <a href="地球物理通論第一堂課｜3小時中英文對照完整講稿.pdf" target="_blank" class="launch-link-btn">下載講稿 PDF ↗</a>
+        </div>
+
+        <div class="launch-card">
+          <div class="launch-card-header">
+            <div class="launch-icon">🗣️</div>
+            <div class="launch-title">CLIL 句型與三例擴充</div>
+          </div>
+          <p class="launch-desc">八層科學論述英文金句庫，每句附帶三個地學實例，雙語報告隨身神器。</p>
+          <a href="地球物理通論第一堂課｜CLIL句型與三例擴充附錄.pdf" target="_blank" class="launch-link-btn">下載句型庫 PDF ↗</a>
+        </div>
+
+        <div class="launch-card">
+          <div class="launch-card-header">
+            <div class="launch-icon">📊</div>
+            <div class="launch-title">Marp 簡報原稿</div>
+          </div>
+          <p class="launch-desc">第一堂課完整的投影片 Markdown 源碼，內含所有教學示意圖與指引。</p>
+          <a href="地球物理通論_第一堂課_PPT詳細版.md" target="_blank" class="launch-link-btn">檢視簡報 Markdown ↗</a>
+        </div>
+
+        <div class="launch-card" style="border: 1px solid var(--cyan-neon); background: rgba(0, 229, 255, 0.03);">
+          <div class="launch-card-header">
+            <div class="launch-icon">🛠️</div>
+            <div class="launch-title">課堂現場互動工具箱</div>
+          </div>
+          <p class="launch-desc">教師投影上課專用白板：含 5/10/15 分鐘計時器、CLIL 全班朗讀燈箱、CER 白板與 Exit Ticket！</p>
+          <a href="classroom_tool.html" class="launch-link-btn" style="color: var(--cyan-neon);">進入現場工具頁 ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div style="font-weight: 800; font-size: 1.1rem; color: var(--text-main);">
+        臺北市立大學 地球環境暨生物資源學系
+      </div>
+      <div>
+        課程名稱：地球物理通論（General Geophysics） · 授課教師：陳達毅（Dayi Chen）
+      </div>
+      <div class="footer-motto">
+        "Explore the Earth · Connect with Science · Empowered by AI"
+      </div>
+      <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim);">
+        部署於 GitHub Pages · 本頁由 Antigravity 現代化工程構建
+      </div>
+    </div>
+  </footer>
+
+  <!-- Concept Image Lightbox Modal -->
+  <div class="image-modal" id="concept-modal" onclick="closeConceptModal()">
+    <div class="modal-img-wrap" onclick="event.stopPropagation()">
+      <button class="btn-modal-close" onclick="closeConceptModal()">✕</button>
+      <img id="modal-img-tag" src="" alt="放大概念圖">
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC (INTERACTION, PROGRESS, QUIZ, ASSET FALLBACKS)
+       ========================================================================== -->
+  <script>
+    // --- Asset Fallback Handling (Works in both root and docs/ subdirectories) ---
+    (function initAssetPaths() {
+      const isDocsSubdir = window.location.pathname.includes('/docs/') || window.location.pathname.endsWith('/docs') || window.location.pathname.endsWith('/docs/');
+      
+      // Update link to classroom_tool if needed
+      const classroomLink = document.getElementById('link-classroom-tool');
+      if (classroomLink) {
+        if (!isDocsSubdir) {
+          // If we are at root, check if docs/classroom_tool.html exists
+          classroomLink.setAttribute('href', 'docs/classroom_tool.html');
+        } else {
+          classroomLink.setAttribute('href', 'classroom_tool.html');
+        }
+      }
+
+      // Handle image errors gracefully
+      window.addEventListener('error', function (e) {
+        if (e.target && e.target.tagName === 'IMG') {
+          const originalSrc = e.target.getAttribute('src');
+          if (originalSrc && !e.target.dataset.triedFallback) {
+            e.target.dataset.triedFallback = 'true';
+            if (originalSrc.startsWith('docs/')) {
+              e.target.src = originalSrc.replace(/^docs\//, '');
+            } else if (!originalSrc.startsWith('http') && !originalSrc.startsWith('docs/')) {
+              e.target.src = 'docs/' + originalSrc;
+            }
+          }
+        }
+      }, true);
+    })();
+
+    // --- Dark / Light Theme Toggle ---
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('geo_theme', newTheme);
+    }
+    
+    if (themeBtn) {
+      themeBtn.addEventListener('click', toggleTheme);
+      // restore theme from local storage
+      const savedTheme = localStorage.getItem('geo_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+      }
+    }
+
+    // --- Reading Scroll Progress Bar ---
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const scrollBar = document.getElementById('scroll-bar');
+      if (scrollBar) scrollBar.style.width = scrolled + '%';
+    });
+
+    // --- Tabs Switching Logic ---
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        
+        btn.classList.add('active');
+        const targetTab = document.getElementById(btn.dataset.tab);
+        if (targetTab) targetTab.classList.add('active');
+      });
+    });
+
+    // --- Interactive CER Simulator Data ---
+    const CER_DATA = {
+      taiwan: {
+        q: "探究問題：為什麼台灣附近經常發生地震，且集中在特定區域？",
+        claim: "台灣附近的強烈地震活動與歐亞板塊與菲律賓海板塊的聚合板塊邊界相互作用直接相關。",
+        evidence: "地震目錄觀測顯示震央密集沿花東縱谷與東部海域呈條帶狀分布，GPS 連續觀測站測得每年約 8 公分的板塊聚合位移量。",
+        reasoning: "若板塊持續以固定速率聚合受阻，應變能量會累積在接觸界面斷層帶上，當超過岩石抗剪強度便引發破裂地震，因此地震並非隨機分布。"
+      },
+      japan: {
+        q: "探究問題：為什麼日本附近常有深源地震，且深度由東向西漸深？",
+        claim: "太平洋板塊正沿日本海溝向西側歐亞板塊下方隱沒，形成傾斜的班尼奧夫隱沒地震帶。",
+        evidence: "震央東側緊鄰深達數千公尺的日本海溝；從海溝向西往內陸，地震震源深度從 20 公里依序加深至 300 公里以上。",
+        reasoning: "冷而緻密的海洋板塊俯衝沉入高溫地函時，脆性破裂僅能在剛性較高的板塊內部發生，因此形成了傾斜向下排列的震源分布面。"
+      },
+      seismic: {
+        q: "探究問題：在折射震測實驗中，為什麼走時曲線在某一距離後斜率會突然變平緩？",
+        claim: "地下深部存在波速更高（V2 > V1）的岩石層，產生了先抵達接收點的臨界折射波（Head Wave）。",
+        evidence: "近距離的直達波走時為陡峭直線；在跨過轉折距離（Crossover Distance）後，折射波率先到達地表，呈現較平緩的直線。",
+        reasoning: "因為走時圖的斜率等於速度的倒數（Slope = 1/V）。斜率變平意味著表觀速度大幅提升，符合震波沿高速底層臨界折射傳播的物理規律。"
+      }
+    };
+
+    function switchCER(key) {
+      const data = CER_DATA[key];
+      if (!data) return;
+      document.getElementById('cer-q-display').textContent = data.q;
+      document.getElementById('cer-claim-text').textContent = data.claim;
+      document.getElementById('cer-evidence-text').textContent = data.evidence;
+      document.getElementById('cer-reasoning-text').textContent = data.reasoning;
+
+      const cerBtns = document.querySelectorAll('.cer-btn');
+      cerBtns.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // --- Interactive Pre-flight Checklist Logic ---
+    let completedItems = new Set();
+
+    function toggleCheckItem(el) {
+      const id = el.dataset.id;
+      if (completedItems.has(id)) {
+        completedItems.delete(id);
+        el.classList.remove('completed');
+      } else {
+        completedItems.add(id);
+        el.classList.add('completed');
+      }
+
+      updateChecklistProgress();
+    }
+
+    function updateChecklistProgress() {
+      const count = completedItems.size;
+      const total = 5;
+      const pct = Math.round((count / total) * 100);
+
+      document.getElementById('check-progress-bar').style.width = pct + '%';
+      document.getElementById('check-progress-text').textContent = `${count} / ${total} 已就緒 (${pct}%)`;
+
+      const toast = document.getElementById('celebration-box');
+      if (count === total) {
+        toast.classList.add('show');
+        fireConfetti();
+      } else {
+        toast.classList.remove('show');
+      }
+    }
+
+    // --- Lightweight Canvas Confetti Generator ---
+    function fireConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const pieces = [];
+      const colors = ['#00e5ff', '#ff5722', '#fbbf24', '#10b981', '#a855f7'];
+
+      for (let i = 0; i < 90; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          size: Math.random() * 8 + 4,
+          speed: Math.random() * 4 + 3,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 8
+        });
+      }
+
+      let animationFrame;
+      let frameCount = 0;
+
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          p.y += p.speed;
+          p.rotation += p.rotationSpeed;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+          ctx.restore();
+        });
+
+        frameCount++;
+        if (frameCount < 160) {
+          animationFrame = requestAnimationFrame(render);
+        } else {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+
+      render();
+    }
+
+    // --- Interactive Persona Mini Quiz ---
+    const QUIZ_QUESTIONS = [
+      {
+        q: "Q1: 當你站在一片廣袤的平原，看見遠方地表隆起了一座新山丘，你的第一直覺是？",
+        options: [
+          { text: "立即架設地震儀，用震波訊號透視地底下是否有逆衝斷層在蠢蠢欲動！", type: "seismic" },
+          { text: "搬出超靈敏重力計，測測看地底下是不是有一團密度極大的基性岩漿體！", type: "gravity" },
+          { text: "探測地溫與地下水流，尋找這座山丘是否伴隨著高溫地熱溫泉水！", type: "thermal" },
+          { text: "打開筆電抓取衛星雷達干涉 (InSAR) 與 PyGMT 數據，先畫一張 3D 位移分析圖！", type: "digital" }
+        ]
+      },
+      {
+        q: "Q2: 課堂上當 AI 給出一個完美的地下地層解釋時，你最想做的事是？",
+        options: [
+          { text: "立刻翻查真實的露頭與鑽井岩芯資料，看看 AI 是不是在瞎掰！", type: "seismic" },
+          { text: "計算理論重力異常，嚴格檢查殘差有沒有縮小到可接受範圍！", type: "gravity" },
+          { text: "追問居禮點深度與熱導率，看看這個模型符合不符合熱力學規律！", type: "thermal" },
+          { text: "把這段 Prompts 存入 GitHub 學習歷程，並寫一段 Python 代碼檢驗它！", type: "digital" }
+        ]
+      },
+      {
+        q: "Q3: 18 週後，你最希望自己掌握哪一項超能力？",
+        options: [
+          { text: "像照 X 光一樣，一眼看穿千米地底深處的斷層與岩層界面！", type: "seismic" },
+          { text: "看見看不見的地球重力位能場，親手 3D 列印出大地水準面 Geoid！", type: "gravity" },
+          { text: "掌握綠色地熱與地下資源探勘密碼，為全球能源轉型提供科學依據！", type: "thermal" },
+          { text: "自豪地向全世界展示我自己獨立建置發布的雙語 GitHub Pages 研究成果！", type: "digital" }
+        ]
+      }
+    ];
+
+    const PERSONA_RESULTS = {
+      seismic: {
+        badge: "⚡",
+        title: "震波穿透先鋒 · The Seismic Pioneer",
+        desc: "你擁有敏銳無比的動態直覺！就像地震波在地殼深處穿梭一樣，你擅長從微小的訊號震顫中推敲宏大的地下構造，是天生的斷層解密獵人！"
+      },
+      gravity: {
+        badge: "🪐",
+        title: "重力引力師 · The Gravity Mastermind",
+        desc: "你沉著冷靜、洞察全局。即便質量隱匿在地表萬米之下，你也能透過微小的重力場變化捕捉密度體，用數學模型看見常人看不見的質量分佈！"
+      },
+      thermal: {
+        badge: "🌋",
+        title: "熱流能量行者 · The Thermal Hunter",
+        desc: "你充滿熱情與行動力！對地球內部的能量循環與地下熱液充滿好奇，你將是未來解鎖潔淨地熱能源與火山構造探勘的先驅之星！"
+      },
+      digital: {
+        badge: "💻",
+        title: "數位地模架構師 · The Geo-Data Architect",
+        desc: "你是現代科技與地球科學的最佳混血兒！精通 Python、PyGMT 與 AI 協作，擅長把枯燥龐大的科學數據轉化為動人優雅的視覺化網頁！"
+      }
+    };
+
+    let currentQIndex = 0;
+    let quizScores = { seismic: 0, gravity: 0, thermal: 0, digital: 0 };
+
+    function renderQuestion() {
+      const qData = QUIZ_QUESTIONS[currentQIndex];
+      document.getElementById('quiz-title').textContent = qData.q;
+      const optsContainer = document.getElementById('quiz-options');
+      optsContainer.innerHTML = '';
+
+      const letters = ['A', 'B', 'C', 'D'];
+      qData.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-opt-btn';
+        btn.innerHTML = `<span class="opt-badge">${letters[idx]}</span><span>${opt.text}</span>`;
+        btn.onclick = () => answerQuiz(opt.type);
+        optsContainer.appendChild(btn);
+      });
+    }
+
+    function answerQuiz(type) {
+      quizScores[type] = (quizScores[type] || 0) + 1;
+      currentQIndex++;
+
+      if (currentQIndex < QUIZ_QUESTIONS.length) {
+        renderQuestion();
+      } else {
+        // Show Results
+        let maxType = 'seismic';
+        let maxScore = -1;
+        for (let t in quizScores) {
+          if (quizScores[t] > maxScore) {
+            maxScore = quizScores[t];
+            maxType = t;
+          }
+        }
+
+        const res = PERSONA_RESULTS[maxType];
+        document.getElementById('quiz-question-screen').style.display = 'none';
+        const resScreen = document.getElementById('quiz-result-screen');
+        resScreen.classList.add('show');
+        
+        document.getElementById('res-badge').textContent = res.badge;
+        document.getElementById('res-title').textContent = res.title;
+        document.getElementById('res-desc').textContent = res.desc;
+
+        fireConfetti();
+      }
+    }
+
+    function restartQuiz() {
+      currentQIndex = 0;
+      quizScores = { seismic: 0, gravity: 0, thermal: 0, digital: 0 };
+      document.getElementById('quiz-result-screen').classList.remove('show');
+      document.getElementById('quiz-question-screen').style.display = 'block';
+      renderQuestion();
+    }
+
+    // --- FAQ Accordion ---
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('active');
+    }
+
+    // --- Lightbox Concept Modal ---
+    function openConceptModal(imgSrc) {
+      const modal = document.getElementById('concept-modal');
+      const imgTag = document.getElementById('modal-img-tag');
+      imgTag.src = imgSrc;
+      modal.classList.add('active');
+    }
+
+    function closeConceptModal() {
+      const modal = document.getElementById('concept-modal');
+      modal.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeConceptModal();
+    });
+  </script>
+</body>
+</html>
